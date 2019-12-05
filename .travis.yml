@@ -8,6 +8,7 @@ addons:
     - texlive
     - texlive-luatex
     - texlive-latex-extra # for xstring, among others
+    - texlive-generic-extra # for iftex, among others
     - wget
     - curl
     - sed
