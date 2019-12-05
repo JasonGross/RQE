@@ -7,6 +7,7 @@ addons:
     packages:
     - texlive
     - texlive-luatex
+    - texlive-latex-extra # for xstring, among others
     - wget
     - curl
     - sed
