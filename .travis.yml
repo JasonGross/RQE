@@ -5,6 +5,7 @@ sudo: false
 addons:
   apt:
     packages:
+    - python-pygments
     - fonts-inconsolata # doesn't seem to be dependended on by texlive-fonts-extra?
     - texlive
     - texlive-luatex
