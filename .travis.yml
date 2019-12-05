@@ -5,10 +5,12 @@ sudo: false
 addons:
   apt:
     packages:
+    - fonts-inconsolata # doesn't seem to be dependended on by texlive-fonts-extra?
     - texlive
     - texlive-luatex
     - texlive-latex-extra # for xstring, among others
     - texlive-generic-extra # for iftex, among others
+    - texlive-fonts-extra # for libertine, among others
     - wget
     - curl
     - sed
