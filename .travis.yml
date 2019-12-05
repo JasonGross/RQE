@@ -25,4 +25,4 @@ script: make LATEX_EXTRA_FLAGS="-interaction=nonstopmode"
 
 after_success:
   - mkdir -p deploy/nightly
-  - cp -f rewriting/rewriting.pdf cover.pdf abstract.pdf with-cover.pdf deploy/nightly/
+  - cp -f rewriting/rewriting.pdf cover.pdf abstract.pdf rewriting-with-cover.pdf deploy/nightly/

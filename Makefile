@@ -1,5 +1,5 @@
 .PHONY: all
-TOP_PDFS := cover.pdf abstract.pdf with-cover.pdf
+TOP_PDFS := cover.pdf abstract.pdf rewriting-with-cover.pdf
 all: rewriting/rewriting.pdf $(TOP_PDFS)
 
 rewriting/%.pdf:
@@ -10,7 +10,7 @@ only-abstract.tex: rewriting/rewriting.tex
 
 abstract.pdf: only-abstract.tex
 
-with-cover.pdf: rewriting/rewriting.pdf cover.pdf
+rewriting-with-cover.pdf: rewriting/rewriting.pdf cover.pdf
 
 $(TOP_PDFS) : %.pdf : %.tex
 	$(MAKE) -f Makefile.common $@

@@ -247,7 +247,7 @@ TSWLatexianTemp*
 /only-abstract.tex
 /abstract.pdf
 /cover.pdf
-/with-cover.pdf
+/rewriting-with-cover.pdf
 /rewriting/rewriting.pdf
 /rewriting/iftex.sty
 /rewriting/usebib.sty
