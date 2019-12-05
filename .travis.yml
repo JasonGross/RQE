@@ -14,6 +14,8 @@ addons:
     - texlive-fonts-extra # for libertine, among others
     - texlive-math-extra # for stmaryrd, among others
     - texlive-generic-recommended # for kastrup for binhex, among others
+    - texlive-lang-greek # for lgrenc.def
+    - texlive-bibtex-extra # for usebib, among others
     - pdftk
     - wget
     - curl
