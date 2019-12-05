@@ -13,6 +13,7 @@ addons:
     - texlive-generic-extra # for iftex, among others
     - texlive-fonts-extra # for libertine, among others
     - texlive-math-extra # for stmaryrd, among others
+    - texlive-generic-recommended # for kastrup for binhex, among others
     - wget
     - curl
     - sed
