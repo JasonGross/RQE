@@ -3,6 +3,10 @@ TOP_NORMAL_PDFS := cover.pdf abstract.pdf
 TOP_PDFS := $(TOP_NORMAL_PDFS) rewriting-with-cover.pdf
 all: rewriting/rewriting.pdf $(TOP_PDFS)
 
+LATEXFLAGS?=
+LATEX_EXTRA_FLAGS?=
+PDFLATEX?=lualatex
+
 rewriting/%.pdf:
 	$(MAKE) -C rewriting $*.pdf
 
@@ -15,4 +19,4 @@ rewriting-with-cover.pdf: cover.pdf rewriting/rewriting.pdf
 	pdftk cover.pdf rewriting/rewriting.pdf cat output $@
 
 $(TOP_NORMAL_PDFS) : %.pdf : %.tex
-	$(MAKE) -f Makefile.common $@
+	@ $(PDFLATEX) $(LATEXFLAGS) $(LATEX_EXTRA_FLAGS) -synctex=1 $<
