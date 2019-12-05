@@ -1,0 +1,26 @@
+language: c
+
+sudo: false
+
+addons:
+  apt:
+    packages:
+    - texlive
+    - wget
+    - curl
+    - sed
+    - grep
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: deploy
+  on:
+    branch: master
+
+script: make LATEX_EXTRA_FLAGS="-interaction=nonstopmode"
+
+after_success:
+  - mkdir -p deploy/nightly
+  - cp -f rewriting/rewriting.pdf cover.pdf abstract.pdf with-cover.pdf deploy/nightly/

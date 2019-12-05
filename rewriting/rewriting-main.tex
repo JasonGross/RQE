@@ -1,0 +1,8 @@
+\RequirePackage{luatex85}
+\documentclass[sigplan,10pt]{acmart}
+\usepackage{pdfpages}
+\input{rewriting.appendix.startpage}
+\edef\preappendixstartpage{\the\numexpr\appendixstartpage-1\relax}
+\begin{document}
+\includepdf[pages={1-\preappendixstartpage}]{rewriting.pdf}
+\end{document}
